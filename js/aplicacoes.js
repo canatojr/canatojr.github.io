@@ -148,7 +148,7 @@ App.aplicacoes = (function ()
         mensagem,
         "#FFF",
         "Bold 18px Trebuchet MS",
-        objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*7),
+        objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*10),
         250
       ]);
 
