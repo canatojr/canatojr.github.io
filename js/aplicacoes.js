@@ -150,7 +150,7 @@ App.aplicacoes = (function ()
         "Bold 18px Trebuchet MS",
         objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*7),
         // *7 se refere à posição horizontal
-        250
+        200
       ]);
 
       mensagem = "Força Peso: ";
