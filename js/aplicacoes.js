@@ -309,7 +309,7 @@ App.aplicacoes = (function ()
      var pontoQ = [pontoG[0], pontoG[1]-(BASE/30)];
 
      var pontoR = App.strategiesCalculadora.pontoPxPy.calcula([NovoXZero, NovoYZero, pontoH[0], pontoH[1], angRadInicial + NOVENTA, pontoQ[0], pontoQ[1]]);
-     desenhaReta(pontoQ[0], pontoQ[1], pontoR[0], pontoR[1], "#DAA520", 1, "1");
+     desenhaReta(pontoQ[0], pontoQ[2], pontoR[0], pontoR[1], "#DAA520", 1, "1");
  
      var pontoS = App.strategiesCalculadora.pontoPxPy.calcula([NovoXZero, NovoYZero, pontoF[0], pontoF[1], angRadInicial, pontoQ[0], pontoQ[1]]);
      desenhaReta(pontoQ[0], pontoQ[1], pontoS[0], pontoS[1], "#DAA520", 1, "1");
