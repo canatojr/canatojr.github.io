@@ -300,13 +300,13 @@ App.aplicacoes = (function ()
 
     // Reta - P
     desenhaReta(NovoXZero, NovoYZero, pontoG[0], pontoG[1], "#DAA520", 3, "1");
-    desenhaReta(pontoM[0], pontoM[2], pontoG[0], pontoG[1], "#DAA520", 3, "1");
+    desenhaReta(pontoM[0], pontoM[1], pontoG[0], pontoG[1], "#DAA520", 3, "1");
     desenhaReta(pontoN[0], pontoN[1], pontoG[0], pontoG[1], "#DAA520", 3, "1");
 
     escreveForcas(pontoE, pontoF, pontoG, pontoH);
 
      // Retas Pontilhadas
-     var pontoQ = [pontoG[0], pontoG[1]-(BASE/30)];
+     var pontoQ = [pontoG[0], pontoG[2]-(BASE/30)];
 
      var pontoR = App.strategiesCalculadora.pontoPxPy.calcula([NovoXZero, NovoYZero, pontoH[0], pontoH[1], angRadInicial + NOVENTA, pontoQ[0], pontoQ[1]]);
      desenhaReta(pontoQ[0], pontoQ[1], pontoR[0], pontoR[1], "#DAA520", 1, "1");
