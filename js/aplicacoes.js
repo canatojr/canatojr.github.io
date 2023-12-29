@@ -221,6 +221,8 @@ App.aplicacoes = (function ()
 
     // Ângulo inicial: 30°
     var angRadInicial = (210*CENTO_OITENTA)/180;
+    //angulos contados a partir do eixo x e caminhando no sentido horário ... por isso 30° = 210° (180° + 30°)
+    // e cento_oitenta é uma variável criada anteriormente, a partir do Pi (Math.PI)
 
     //Preenche o ângulo com um segmento de arco, para indicar a área que ele representa    
     // Desenhando
@@ -298,7 +300,7 @@ App.aplicacoes = (function ()
 
     // Reta - P
     desenhaReta(NovoXZero, NovoYZero, pontoG[0], pontoG[1], "#DAA520", 3, "1");
-    desenhaReta(pontoM[0], pontoM[1], pontoG[0], pontoG[1], "#DAA520", 3, "1");
+    desenhaReta(pontoM[0], pontoM[2], pontoG[0], pontoG[1], "#DAA520", 3, "1");
     desenhaReta(pontoN[0], pontoN[1], pontoG[0], pontoG[1], "#DAA520", 3, "1");
 
     escreveForcas(pontoE, pontoF, pontoG, pontoH);
