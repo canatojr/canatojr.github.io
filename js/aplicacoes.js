@@ -299,14 +299,17 @@ App.aplicacoes = (function ()
     desenhaReta(pontoL[0], pontoL[1], pontoF[0], pontoF[1], "#96f", 3, "1");
 
     // Reta - P
-    desenhaReta(NovoXZero, NovoYZero, pontoG[0], pontoG[1], "#FFF", 3, "1");
+    desenhaReta(NovoXZero, NovoYZero, pontoG[0], pontoG[1], "#DAA520", 3, "1");
     desenhaReta(pontoM[0], pontoM[1], pontoG[0], pontoG[1], "#DAA520", 3, "1");
     desenhaReta(pontoN[0], pontoN[1], pontoG[0], pontoG[1], "#DAA520", 3, "1");
 
     escreveForcas(pontoE, pontoF, pontoG, pontoH);
 
      // Retas Pontilhadas
-     var pontoQ = [pontoG[0], pontoG[1]-(BASE/18)];
+     //var pontoQ = [pontoG[0], pontoG[1]-(BASE/18)];
+     //linha modificada para fazr com que a linha pontilhada termine no final da seta do vetor P
+     var pontoQ = [pontoG[0], pontoG[1]];
+
 
      var pontoR = App.strategiesCalculadora.pontoPxPy.calcula([NovoXZero, NovoYZero, pontoH[0], pontoH[1], angRadInicial + NOVENTA, pontoQ[0], pontoQ[1]]);
      desenhaReta(pontoQ[0], pontoQ[1], pontoR[0], pontoR[1], "#DAA520", 1, "1");
