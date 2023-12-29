@@ -244,7 +244,7 @@ App.aplicacoes = (function ()
     desenhaReta(ponto[0], ponto[1], X_ZERO, Y_ZERO, "#FFF", 4, "1");
 
     // Coordenadas dos pontos vértices do quadrilátero (corpo sobre o plano inclinado)
-    var pontoA = App.strategiesCalculadora.ponto.calcula([angRadInicial, X_ZERO, Y_ZERO, (BASE/18)*6]);
+    var pontoA = App.strategiesCalculadora.ponto.calcula([angRadInicial, X_ZERO, Y_ZERO, (BASE/18)*9]);
     var pontoB = App.strategiesCalculadora.ponto.calcula([angRadInicial, X_ZERO, Y_ZERO, (BASE/18)*12]);
     var pontoC = App.strategiesCalculadora.ponto.calcula([angRadInicial + NOVENTA, pontoB[0], pontoB[1], (BASE/18)*3]);
     var pontoD = App.strategiesCalculadora.ponto.calcula([angRadInicial + NOVENTA, pontoA[0], pontoA[1], (BASE/18)*3]);
@@ -306,7 +306,7 @@ App.aplicacoes = (function ()
     escreveForcas(pontoE, pontoF, pontoG, pontoH);
 
      // Retas Pontilhadas
-     var pontoQ = [pontoG[0], pontoG[1]-(BASE/18)];
+     var pontoQ = [pontoG[0], pontoG[1]-(BASE/18)*6];
 
      var pontoR = App.strategiesCalculadora.pontoPxPy.calcula([NovoXZero, NovoYZero, pontoH[0], pontoH[1], angRadInicial + NOVENTA, pontoQ[0], pontoQ[1]]);
      desenhaReta(pontoQ[0], pontoQ[1], pontoR[0], pontoR[1], "#DAA520", 1, "1");
