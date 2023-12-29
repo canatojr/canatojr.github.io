@@ -267,7 +267,7 @@ App.aplicacoes = (function ()
     //  a reta que representa o sentido da força normal N ... ponto E
     //  a reta que representa a força peso (gravidade) P ... ponto G
     //  a reta Px ... ponto H
-    //  a reta Py ... ponto F ... comprimento de E = F   
+    //  a reta Py ... ponto F ... comprimento de E = F e ambos precisam ser menores que G ... ajustando valores em BASE/12 para Peso e BASE/14 para N  
     var pontoE = App.strategiesCalculadora.ponto.calcula([angRadInicial + NOVENTA, NovoXZero, NovoYZero, (BASE/14)*4]);
     var pontoF = App.strategiesCalculadora.ponto.calcula([angRadInicial - NOVENTA, NovoXZero, NovoYZero, (BASE/14)*4]);
     var pontoG = App.strategiesCalculadora.ponto.calcula([angRadInicial - angRetaP, NovoXZero, NovoYZero, (BASE/12)*4]);
