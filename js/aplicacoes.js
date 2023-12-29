@@ -270,7 +270,7 @@ App.aplicacoes = (function ()
     //  a reta Py ... ponto F ... comprimento de E = F   
     var pontoE = App.strategiesCalculadora.ponto.calcula([angRadInicial + NOVENTA, NovoXZero, NovoYZero, (BASE/14)*4]);
     var pontoF = App.strategiesCalculadora.ponto.calcula([angRadInicial - NOVENTA, NovoXZero, NovoYZero, (BASE/14)*4]);
-    var pontoG = App.strategiesCalculadora.ponto.calcula([angRadInicial - angRetaP, NovoXZero, NovoYZero, (BASE/14)*4]);
+    var pontoG = App.strategiesCalculadora.ponto.calcula([angRadInicial - angRetaP, NovoXZero, NovoYZero, (BASE/18)*4]);
     var pontoH = App.strategiesCalculadora.ponto.calcula([angRadInicial - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE/14)*4]);
 
     var pontoI = App.strategiesCalculadora.ponto.calcula([angRadInicial + NOVENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE/14)*3.5]);
