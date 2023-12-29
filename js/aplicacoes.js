@@ -306,10 +306,10 @@ App.aplicacoes = (function ()
     escreveForcas(pontoE, pontoF, pontoG, pontoH);
 
      // Retas Pontilhadas
-     var pontoQ = [pontoG[0], pontoG[1]-(BASE/30)];
+     var pontoQ = [pontoG[0], pontoG[1]-(BASE)];
 
      var pontoR = App.strategiesCalculadora.pontoPxPy.calcula([NovoXZero, NovoYZero, pontoH[0], pontoH[1], angRadInicial + NOVENTA, pontoQ[0], pontoQ[1]]);
-     desenhaReta(pontoQ[0], pontoQ[1], pontoR[0], pontoR[1], "#DAA520", 1, "10000");
+     desenhaReta(pontoQ[0], pontoQ[1], pontoR[0], pontoR[1], "#DAA520", 1, "1");
      //pontoR define a linha pontilhada perpendicular a Px e pontoQ a linha pontilhada perpendicular a Py e "#DAA520" define a cor, 1 define a espessura e "1" ainda não sei
  
      var pontoS = App.strategiesCalculadora.pontoPxPy.calcula([NovoXZero, NovoYZero, pontoF[0], pontoF[1], angRadInicial, pontoQ[0], pontoQ[1]]);
