@@ -19,7 +19,7 @@ App.aplicacoes = (function ()
   var NOVENTA = CENTO_OITENTA/2;
   var TRINTA = NOVENTA/3;
   var DUZENTOS_SETENTA = CENTO_OITENTA + NOVENTA;
-  
+  var GRAUUM = CENTO_OITENTA/180;
   $(document).ready( function()
   {
     //instância de singletonCanvas
@@ -382,7 +382,7 @@ App.aplicacoes = (function ()
     ]);
 
 
-    if(angRad=CENTO_OITENTA)
+    if(angRad=CENTO_OITENTA+GRAUUM*29)
     {
       //Preenche o ângulo com um segmento de arco, para indicar a área que ele representa    
       // Desenhando
