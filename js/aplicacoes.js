@@ -547,7 +547,7 @@ App.aplicacoes = (function ()
      */
       var massa = 10;
       var g = 9.8;
-      var p = massa*g*2;
+      var p = massa * g;
       var n = p * Math.cos(angFinal);
       var a = g * Math.sin(angFinal);
 
