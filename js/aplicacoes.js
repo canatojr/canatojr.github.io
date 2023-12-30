@@ -386,13 +386,14 @@ App.aplicacoes = (function ()
     {
       //Preenche o ângulo com um segmento de arco, para indicar a área que ele representa    
       // Desenhando
+      //(BASE/18)*3 determina o tamanho, CENTO_OITENTA determina onde começa o arco
       App.strategiesTela.construtorArco.executa([
           "1",
           X_ZERO,
           Y_ZERO,
           (BASE/18)*3,
           angRad,
-          NOVENTA,
+          CENTO_OITENTA,
           "#FFF",
           3
       ]);        
