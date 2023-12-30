@@ -390,9 +390,9 @@ App.aplicacoes = (function ()
           "1",
           X_ZERO,
           Y_ZERO,
-          (BASE/18)*9,
+          (BASE/18)*3,
           angRad,
-          CENTO_OITENTA,
+          NOVENTA,
           "#FFF",
           3
       ]);        
