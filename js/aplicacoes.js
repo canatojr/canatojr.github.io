@@ -369,6 +369,35 @@ App.aplicacoes = (function ()
   //----------------------------------------------------------------------------
   // ReDesenha
   //----------------------------------------------------------------------------
+  
+  var calculaForcasAceleracao = function(angFinal){
+    /*
+          Ângulo entre o Plano Móvel e a Base: 
+    
+          Massa: 10kg
+          g: 9,8 m/s
+          Sem Atrito
+    
+          Aceleração do corpo -> a = g.senAngulo
+    
+          Força Peso = m*g
+          Força Normal N = m*g*cosAngulo
+    
+          Considerando:
+          Aceleração da Gravidade: 9,8m/s2.
+          Sem atrito.
+         */
+          var massa = 10;
+          var g = 9.8;
+          var p = massa * g;
+          var n = p * Math.cos(angFinal);
+          var a = g * Math.sin(angFinal);
+    
+          return [p, parseFloat(n).toFixed(5), parseFloat(a).toFixed(5)];
+    
+      }
+  
+  
   var reDesenha = function (pontoX, pontoY, angRad)
   {
     //limpeza inicial da tela, para reconstrução
@@ -528,32 +557,7 @@ App.aplicacoes = (function ()
     ]);
   }
 
-  var calculaForcasAceleracao = function(angFinal){
-/*
-      Ângulo entre o Plano Móvel e a Base: 
-
-      Massa: 10kg
-      g: 9,8 m/s
-      Sem Atrito
-
-      Aceleração do corpo -> a = g.senAngulo
-
-      Força Peso = m*g
-      Força Normal N = m*g*cosAngulo
-
-      Considerando:
-      Aceleração da Gravidade: 9,8m/s2.
-      Sem atrito.
-     */
-      var massa = 10;
-      var g = 9.8;
-      var p = massa * g;
-      var n = p * Math.cos(angFinal);
-      var a = g * Math.sin(angFinal);
-
-      return [p, parseFloat(n).toFixed(5), parseFloat(a).toFixed(5)];
-
-  }
+  
 
   // Fora da função, pois deve guardar o valor final dentro da função
   // Limitando o ângulo na tela entre 0° a 50°
