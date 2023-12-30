@@ -19,7 +19,7 @@ App.aplicacoes = (function ()
   var NOVENTA = CENTO_OITENTA/2;
   var TRINTA = NOVENTA/3;
   var DUZENTOS_SETENTA = CENTO_OITENTA + NOVENTA;
-  var GRAUUM = CENTO_OITENTA/180;
+  
   $(document).ready( function()
   {
     //instância de singletonCanvas
@@ -382,7 +382,7 @@ App.aplicacoes = (function ()
     ]);
 
 
-    if(angRad=CENTO_OITENTA+GRAUUM*29)
+    if(angRad>CENTO_OITENTA)
     {
       //Preenche o ângulo com um segmento de arco, para indicar a área que ele representa    
       // Desenhando
@@ -424,23 +424,23 @@ App.aplicacoes = (function ()
     var NovoYZero = (pontoA[1]+pontoC[1])/2
 
     // Coordenadas dos pontos para:
-    //  a reta que representa o sentido da força normal N ... ponto E
-    //  a reta que representa a força peso (gravidade) P ... ponto G
-    //  a reta Px ... ponto H
-    //  a reta Py ... ponto F ... comprimento de E = F e ambos precisam ser menores que G ... ajustando valores em BASE/12 para Peso e BASE/14 para N  e BASE/24 para Px
-    var pontoE = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA, NovoXZero, NovoYZero, (BASE/13)*4]);
-    var pontoF = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA, NovoXZero, NovoYZero, (BASE/13)*4]);
+    //  a reta que representa o sentido da força normal N
+    //  a reta que representa a força peso (gravidade) P
+    //  a reta Px 
+    //  a reta Py    
+    var pontoE = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA, NovoXZero, NovoYZero, (BASE/14)*4]);
+    var pontoF = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA, NovoXZero, NovoYZero, (BASE/14)*4]);
     var pontoG = App.strategiesCalculadora.ponto.calcula([angRad - angRetaP, NovoXZero, NovoYZero, (BASE/12)*4]);
-    var pontoH = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE/26)*4]);
+    var pontoH = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE/24)*4]);
 
-    var pontoI = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE/13)*3.5]);
-    var pontoJ = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE/13)*3.5]);
-    var pontoK = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE/13)*3.5]);
-    var pontoL = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE/13)*3.5]);
+    var pontoI = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE/14)*3.5]);
+    var pontoJ = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE/14)*3.5]);
+    var pontoK = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE/14)*3.5]);
+    var pontoL = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE/14)*3.5]);
     var pontoM = App.strategiesCalculadora.ponto.calcula([angRad - angRetaP - (TRINTA/10), NovoXZero, NovoYZero, (BASE/12)*3.5]);
     var pontoN = App.strategiesCalculadora.ponto.calcula([angRad - angRetaP + (TRINTA/10), NovoXZero, NovoYZero, (BASE/12)*3.5]);
-    var pontoO = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE/26)*3.5]);
-    var pontoP = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE/26)*3.5]);
+    var pontoO = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE/24)*3.5]);
+    var pontoP = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE/24)*3.5]);
 
     // Reta - Força N e seta
     desenhaReta(NovoXZero, NovoYZero, pontoE[0], pontoE[1], "#0F0", 3, "1");
