@@ -31,7 +31,7 @@ App.aplicacoes = (function ()
     X_ZERO = objCanvas.canvasWidth/2;
     Y_ZERO = objCanvas.canvasHeight/2 + objCanvas.canvasHeight/5;
     //BASE = objCanvas.canvasWidth/2.5;
-    TESTE = 2.5;
+    TESTE = 5;
     BASE = (objCanvas.canvasWidth)/TESTE;
 
   })
