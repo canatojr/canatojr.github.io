@@ -18,7 +18,7 @@ App.aplicacoes = (function ()
   var gteste = 9.8;
   var pteste = massateste * gteste;
   var nteste = pteste * Math.cos(angFinal);
-  var reduzdimensao = 200;
+  var reduzdimensao = 250;
 
   //Constantes numéricas - ângulos principais
   var CENTO_OITENTA = Math.PI;
