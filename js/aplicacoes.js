@@ -14,11 +14,11 @@ App.aplicacoes = (function ()
   var Y_ZERO;
   var BASE;
   //tentativa de criar nova variável para poder multiplicar por BASE
-  var TESTE;
-  var massateste = 10;
-  var gteste = 0.098;
+    var massateste = 10;
+  var gteste = 9.8;
   var pteste = massateste * gteste;
   var nteste = pteste * Math.cos(angFinal);
+  var reduzdimensao = 250;
 
   //Constantes numéricas - ângulos principais
   var CENTO_OITENTA = Math.PI;
@@ -37,7 +37,7 @@ App.aplicacoes = (function ()
     Y_ZERO = objCanvas.canvasHeight/2 + objCanvas.canvasHeight/5;
     //BASE = objCanvas.canvasWidth/2.5;
     //TESTE = 2.5;
-    BASE = (objCanvas.canvasWidth)/pteste;
+    BASE = (objCanvas.canvasWidth)*(reduzdimensao/pteste);
 
   })
 
