@@ -13,6 +13,7 @@ App.aplicacoes = (function ()
   var X_ZERO;
   var Y_ZERO;
   var BASE;
+  var TESTE;
 
   //Constantes numéricas - ângulos principais
   var CENTO_OITENTA = Math.PI;
@@ -30,7 +31,8 @@ App.aplicacoes = (function ()
     X_ZERO = objCanvas.canvasWidth/2;
     Y_ZERO = objCanvas.canvasHeight/2 + objCanvas.canvasHeight/5;
     //BASE = objCanvas.canvasWidth/2.5;
-    BASE = (objCanvas.canvasWidth)/2.5;
+    TESTE = 2.5;
+    BASE = (objCanvas.canvasWidth)/TESTE;
 
   })
 
