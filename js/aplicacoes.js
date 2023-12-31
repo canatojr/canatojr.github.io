@@ -16,7 +16,7 @@ App.aplicacoes = (function ()
   //tentativa de criar nova variável para poder multiplicar por BASE
   var TESTE;
   var massateste = 10;
-  var gteste = 0.98;
+  var gteste = 0.098;
   var pteste = massateste * gteste;
   var nteste = pteste * Math.cos(angFinal);
 
