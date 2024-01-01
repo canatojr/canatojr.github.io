@@ -463,10 +463,10 @@ App.aplicacoes = (function ()
     var pontoG = App.strategiesCalculadora.ponto.calcula([angRad - angRetaP, NovoXZero, NovoYZero, (BASE/14)*4]);
     var pontoH = App.strategiesCalculadora.ponto.calcula([angRad, NovoXZero, NovoYZero, (BASE_Px/14)*4]);
 
-    var pontoI = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]);
-    var pontoJ = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]);
-    var pontoK = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]);
-    var pontoL = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]);
+    var pontoI = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]);
+    var pontoJ = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]);
+    var pontoK = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]);
+    var pontoL = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]);
     var pontoM = App.strategiesCalculadora.ponto.calcula([angRad - angRetaP - (TRINTA/10), NovoXZero, NovoYZero, (BASE/14)*3.5]);
     var pontoN = App.strategiesCalculadora.ponto.calcula([angRad - angRetaP + (TRINTA/10), NovoXZero, NovoYZero, (BASE/14)*3.5]);
     var pontoO = App.strategiesCalculadora.ponto.calcula([angRad - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]);
