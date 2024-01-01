@@ -571,13 +571,13 @@ App.aplicacoes = (function ()
       var massa = 10;
       var g = 9.8;
       var p = massa * g;
-      var n = p * Math.cos(angFinal);
+      var py = p * Math.cos(angFinal);
     //  var py = p * Math.cos(angFinal);
     //  var px = p * Math.sin(angFinal);
   
       var a = g * Math.sin(angFinal);
 
-      return [p, parseFloat(n).toFixed(5), parseFloat(a).toFixed(5)];
+      return [p, parseFloat(py).toFixed(5), parseFloat(a).toFixed(5)];
 
   }
 
