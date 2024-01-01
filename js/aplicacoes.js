@@ -394,8 +394,8 @@ App.aplicacoes = (function ()
     var massa = 10;
     var g = 9.8;
     var p = massa * g;
-    var py = p * Math.cos(angFinal);
-    var px = p * Math.sin(angFinal);
+    var py = p * Math.cos(angRad);
+    var px = p * Math.sin(angRad);
     var BASE_Py = (objCanvas.canvasWidth)/(reduzdimensao/py);
     var BASE_Px = (objCanvas.canvasWidth)/(reduzdimensao/px);
     
