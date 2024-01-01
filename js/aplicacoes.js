@@ -15,8 +15,6 @@ App.aplicacoes = (function ()
   var BASE;
   var BASE_Py_inicial;
   var BASE_Px_inicial;
-  var BASE_Py;
-  var BASE_Px;
   
   //Constantes numéricas - ângulos principais
   var CENTO_OITENTA = Math.PI;
@@ -34,83 +32,7 @@ App.aplicacoes = (function ()
   var py_inicial = p_inicial * Math.cos(angRadInicial);
   var px_inicial = p_inicial * Math.sin(angRadInicial);
   var reduzdimensao = 250;
-  
-  var angFinal;
-  /*
-    Detecta botões do teclado pressionados
-  */
-  var ajustaKeyDown = function ()
-  {
-    //desvincula os eventos existentes (todos os keydowns)
-    objCanvas.doc.unbind("keydown");
-
-    objCanvas.doc.on("keydown.planoinclinado", function (evt)
-    {
-      var angRad; // para uso interno na função
-
-      // garante que o ângulo sempre comece em ZERO quando entrar no módulo
-      if(primeiraTela)
-      {
-        angFinal = 210;
-        primeiraTela = false;
-      }
-
-      switch (evt.keyCode) //Testa o código do evento do teclado
-      {
-        //
-        /*
-        código 40 -> seta para baixo --------------------------------------------
-        Faz a reta andar no sentido antihorário, fazendo o ângulo decrescer
-        */
-        case 40:
-          if(angFinal<=180)
-            angFinal=180;
-          else
-            angFinal--;
-
-          if(angFinal==0)
-            angRad = 0;
-
-          else
-            angRad = (angFinal*CENTO_OITENTA)/180;// valor corrigido, em Rad
-
-          break;
-
-        //
-        /*
-        seta para cima ----------------------------------------------
-        */
-        case 38:
-          if(angFinal>=230)
-            angFinal=230;
-          else
-            angFinal++;
-
-          angRad = (angFinal*CENTO_OITENTA)/180;
-
-          break;
-
-        /*
-        Para qualquer outra tecla, encerra a execução dessa função
-        */
-        default:
-          return;
-      }
-
-      var calculos = calculaForcasAceleracao(angRad-CENTO_OITENTA);    
-
-       });
-  } //Fim ajustaKeydown
-
-  
-  var massa = 10;
-  var g = 9.8;
-  var p = massa * g;
-  var py = p * Math.cos(angFinal);
-  var px = p * Math.sin(angFinal);
-  
-
-  
+    
   $(document).ready( function()
   {
     //instância de singletonCanvas
@@ -125,9 +47,6 @@ App.aplicacoes = (function ()
     BASE = (objCanvas.canvasWidth)/(reduzdimensao/p_inicial);
     BASE_Py_inicial = (objCanvas.canvasWidth)/(reduzdimensao/py_inicial);
     BASE_Px_inicial = (objCanvas.canvasWidth)/(reduzdimensao/px_inicial);
-    BASE_Py = (objCanvas.canvasWidth)/(reduzdimensao/py);
-    BASE_Px = (objCanvas.canvasWidth)/(reduzdimensao/px);
-
   })
 
   //Função Principal
@@ -419,6 +338,7 @@ App.aplicacoes = (function ()
 
   var reescreve = function(angulo, p, n, a){
 
+
     var mensagem = angulo + "°";
     App.strategiesTela.construtorTexto.executa([
       "1",
@@ -469,6 +389,33 @@ App.aplicacoes = (function ()
   //----------------------------------------------------------------------------
   var reDesenha = function (pontoX, pontoY, angRad)
   {
+
+  //constantes
+  var BASE_Py;
+  var BASE_Px;
+ 
+
+  var massa = 10;
+    var g = 9.8;
+    var p = massa * g;
+    var py = p * Math.cos(angFinal);
+    var px = p * Math.sin(angFinal);
+
+  $(document).ready( function()
+  {
+    //instância de singletonCanvas
+    objCanvas = App.singletons.singletonCanvas.getInstancia();
+    objImagens = App.singletons.singletonImagens.getInstancia();
+
+    
+    //constantes para serem usadas pelas funções
+    X_ZERO = objCanvas.canvasWidth/2;
+    Y_ZERO = objCanvas.canvasHeight/2 + objCanvas.canvasHeight/5;
+    BASE = (objCanvas.canvasWidth)/(reduzdimensao/p_inicial);
+    BASE_Py = (objCanvas.canvasWidth)/(reduzdimensao/py);
+    BASE_Px = (objCanvas.canvasWidth)/(reduzdimensao/px);
+
+  })
     //limpeza inicial da tela, para reconstrução
     //somente o canvas superior
     App.strategiesTela.limpaTela.executa([
