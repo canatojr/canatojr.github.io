@@ -26,13 +26,13 @@ App.aplicacoes = (function ()
   
   
   //tentativa de criar nova variável para poder multiplicar por BASE
-    var massateste = 10;
-     var gteste = 9.8;
-     var pteste = massateste * gteste;
+    var massa_inicial = 10;
+     var g_inicial = 9.8;
+     var p_inicial = massa_inicial * g_inicial;
  // var angRadInicial = (210*CENTO_OITENTA)/180;
     var angRadInicial = TRINTA;
-  var py_inicial = pteste * Math.cos(angRadInicial);
-  var px_inicial = pteste * Math.sin(angRadInicial);
+  var py_inicial = p_inicial * Math.cos(angRadInicial);
+  var px_inicial = p_inicial * Math.sin(angRadInicial);
   var reduzdimensao = 250;
   
   
