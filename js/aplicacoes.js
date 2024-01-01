@@ -15,8 +15,8 @@ App.aplicacoes = (function ()
   var BASE;
   var BASE_Py_inicial;
   var BASE_Px_inicial;
-  //var BASE_Py;
-  //var BASE_Px;
+  var BASE_Py;
+  var BASE_Px;
   
   //Constantes numéricas - ângulos principais
   var CENTO_OITENTA = Math.PI;
@@ -50,8 +50,8 @@ App.aplicacoes = (function ()
     BASE = (objCanvas.canvasWidth)/(reduzdimensao/p_inicial);
     BASE_Py_inicial = (objCanvas.canvasWidth)/(reduzdimensao/py_inicial);
     BASE_Px_inicial = (objCanvas.canvasWidth)/(reduzdimensao/px_inicial);
-    //BASE_Py = (objCanvas.canvasWidth)/(reduzdimensao/py);
-    //BASE_Px = (objCanvas.canvasWidth)/(reduzdimensao/px);
+    BASE_Py = (objCanvas.canvasWidth)/(reduzdimensao/py);
+    BASE_Px = (objCanvas.canvasWidth)/(reduzdimensao/px);
 
   })
 
