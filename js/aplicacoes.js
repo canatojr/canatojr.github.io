@@ -26,8 +26,9 @@ App.aplicacoes = (function ()
     var massateste = 10;
   var gteste = 9.8;
   var pteste = massateste * gteste;
-  var angRadInicial = (210*CENTO_OITENTA)/180;
-  var nteste = pteste * Math.cos(angRadInicial);
+ // var angRadInicial = (210*CENTO_OITENTA)/180;
+    var angRadInicial = DUZENTOS_SETENTA;
+ var nteste = pteste * Math.cos(angRadInicial);
   var reduzdimensao = 250;
 
   
