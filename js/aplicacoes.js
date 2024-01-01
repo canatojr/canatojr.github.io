@@ -13,8 +13,8 @@ App.aplicacoes = (function ()
   var X_ZERO;
   var Y_ZERO;
   var BASE;
-  var BASE_Py;
-  var BASE_Px;
+  var BASEPy;
+  var BASEPx;
   
   //Constantes numéricas - ângulos principais
   var CENTO_OITENTA = Math.PI;
