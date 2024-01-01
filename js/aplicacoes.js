@@ -34,8 +34,6 @@ App.aplicacoes = (function ()
   var py_inicial = p * Math.cos(angRadInicial);
   var px_inicial = p * Math.sin(angRadInicial);
   var reduzdimensao = 250;
-  var py = p * Math.cos(angFinal);
-  var px = p * Math.sin(angFinal);
   var a = g * Math.sin(angFinal);
   
   $(document).ready( function()
@@ -570,13 +568,16 @@ App.aplicacoes = (function ()
       Aceleração da Gravidade: 9,8m/s2.
       Sem atrito.
      */
-     // var massa = 10;
-     // var g = 9.8;
-     // var p = massa * g;
-     // var n = p * Math.cos(angFinal);
-     // var a = g * Math.sin(angFinal);
+      var massa = 10;
+      var g = 9.8;
+      var p = massa * g;
+    //  var n = p * Math.cos(angFinal);
+      var py = p * Math.cos(angFinal);
+      var px = p * Math.sin(angFinal);
+  
+      var a = g * Math.sin(angFinal);
 
-      return [p, parseFloat(n).toFixed(5), parseFloat(a).toFixed(5)];
+      return [p, parseFloat(py).toFixed(5), parseFloat(a).toFixed(5)];
 
   }
 
