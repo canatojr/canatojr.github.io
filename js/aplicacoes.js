@@ -55,90 +55,12 @@ App.aplicacoes = (function ()
           var massa = 10;
           var g = 9.8;
           var p = massa * g;
-          var py = p * Math.cos(angFinal);
+          var n = p * Math.cos(angFinal);
         //  var py = p * Math.cos(angFinal);
           var px = p * Math.sin(angFinal);
       
           var a = g * Math.sin(angFinal);
-    
-          return [p, parseFloat(py).toFixed(5), parseFloat(a).toFixed(5)];
-    
-      }
-    
-      // Fora da função, pois deve guardar o valor final dentro da função
-      // Limitando o ângulo na tela entre 0° a 50°
-      var angFinal;
-      /*
-        Detecta botões do teclado pressionados
-      */
-      var ajustaKeyDown = function ()
-      {
-        //desvincula os eventos existentes (todos os keydowns)
-        objCanvas.doc.unbind("keydown");
-    
-        objCanvas.doc.on("keydown.planoinclinado", function (evt)
-        {
-          var angRad; // para uso interno na função
-    
-          // garante que o ângulo sempre comece em ZERO quando entrar no módulo
-          if(primeiraTela)
-          {
-            angFinal = 210;
-            primeiraTela = false;
-          }
-    
-          switch (evt.keyCode) //Testa o código do evento do teclado
-          {
-            //
-            /*
-            código 40 -> seta para baixo --------------------------------------------
-            Faz a reta andar no sentido antihorário, fazendo o ângulo decrescer
-            */
-            case 40:
-              if(angFinal<=180)
-                angFinal=180;
-              else
-                angFinal--;
-    
-              if(angFinal==0)
-                angRad = 0;
-    
-              else
-                angRad = (angFinal*CENTO_OITENTA)/180;// valor corrigido, em Rad
-    
-              break;
-    
-            //
-            /*
-            seta para cima ----------------------------------------------
-            */
-            case 38:
-              if(angFinal>=230)
-                angFinal=230;
-              else
-                angFinal++;
-    
-              angRad = (angFinal*CENTO_OITENTA)/180;
-    
-              break;
-    
-            /*
-            Para qualquer outra tecla, encerra a execução dessa função
-            */
-            default:
-              return;
-          }
-    
-          var calculos = calculaForcasAceleracao(angRad-CENTO_OITENTA);    
-    
-          //chama função para calcular o ponto da reta vermelha,
-          // para redesenhar e escreescrever
-          var ponto = App.strategiesCalculadora.ponto.calcula([angRad, X_ZERO, Y_ZERO, BASE]);
-          reDesenha(ponto[0], ponto[1], angRad);
-          reescreve(angFinal-180, calculos[0], calculos[1], calculos[2]);
-        });
-      } //Fim ajustaKeydown
-      
+  
   $(document).ready( function()
   {
     //instância de singletonCanvas
@@ -554,19 +476,19 @@ App.aplicacoes = (function ()
     //  a reta que representa a força peso (gravidade) P
     //  a reta Px 
     //  a reta Py    
-    var pontoE = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA, NovoXZero, NovoYZero, (BASE_Py/14)*4]);
-    var pontoF = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA, NovoXZero, NovoYZero, (BASE_Py/14)*4]);
+    var pontoE = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA, NovoXZero, NovoYZero, (BASE_Py_inicial/14)*4]);
+    var pontoF = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA, NovoXZero, NovoYZero, (BASE_Py_inicial/14)*4]);
     var pontoG = App.strategiesCalculadora.ponto.calcula([angRad - angRetaP, NovoXZero, NovoYZero, (BASE/14)*4]);
-    var pontoH = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE_Px/14)*4]);
+    var pontoH = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE_Px_inicial/14)*4]);
 
-    var pontoI = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]);
-    var pontoJ = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]);
-    var pontoK = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]);
-    var pontoL = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]);
+    var pontoI = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py_inicial/14)*3.5]);
+    var pontoJ = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py_inicial/14)*3.5]);
+    var pontoK = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py_inicial/14)*3.5]);
+    var pontoL = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py_inicial/14)*3.5]);
     var pontoM = App.strategiesCalculadora.ponto.calcula([angRad - angRetaP - (TRINTA/10), NovoXZero, NovoYZero, (BASE/14)*3.5]);
     var pontoN = App.strategiesCalculadora.ponto.calcula([angRad - angRetaP + (TRINTA/10), NovoXZero, NovoYZero, (BASE/14)*3.5]);
-    var pontoO = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]);
-    var pontoP = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]);
+    var pontoO = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px_inicial/14)*3.5]);
+    var pontoP = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px_inicial/14)*3.5]);
 
     // Reta - Força N e seta
     desenhaReta(NovoXZero, NovoYZero, pontoE[0], pontoE[1], "#0F0", 3, "1");
@@ -654,7 +576,109 @@ App.aplicacoes = (function ()
     ]);
   }
 
+  var calculaForcasAceleracao = function(angFinal){
+/*
+      Ângulo entre o Plano Móvel e a Base: 
+
+      Massa: 10kg
+      g: 9,8 m/s
+      Sem Atrito
+
+      Aceleração do corpo -> a = g.senAngulo
+
+      Força Peso = m*g
+      Força Normal N = m*g*cosAngulo
+
+      Considerando:
+      Aceleração da Gravidade: 9,8m/s2.
+      Sem atrito.
+     */
+      var massa = 10;
+      var g = 9.8;
+      var p = massa * g;
+      var n = p * Math.cos(angFinal);
+    //  var py = p * Math.cos(angFinal);
+      var px = p * Math.sin(angFinal);
   
+      var a = g * Math.sin(angFinal);
+
+      return [p, parseFloat(n).toFixed(5), parseFloat(a).toFixed(5)];
+
+  }
+
+  // Fora da função, pois deve guardar o valor final dentro da função
+  // Limitando o ângulo na tela entre 0° a 50°
+  var angFinal;
+  /*
+    Detecta botões do teclado pressionados
+  */
+  var ajustaKeyDown = function ()
+  {
+    //desvincula os eventos existentes (todos os keydowns)
+    objCanvas.doc.unbind("keydown");
+
+    objCanvas.doc.on("keydown.planoinclinado", function (evt)
+    {
+      var angRad; // para uso interno na função
+
+      // garante que o ângulo sempre comece em ZERO quando entrar no módulo
+      if(primeiraTela)
+      {
+        angFinal = 210;
+        primeiraTela = false;
+      }
+
+      switch (evt.keyCode) //Testa o código do evento do teclado
+      {
+        //
+        /*
+        código 40 -> seta para baixo --------------------------------------------
+        Faz a reta andar no sentido antihorário, fazendo o ângulo decrescer
+        */
+        case 40:
+          if(angFinal<=180)
+            angFinal=180;
+          else
+            angFinal--;
+
+          if(angFinal==0)
+            angRad = 0;
+
+          else
+            angRad = (angFinal*CENTO_OITENTA)/180;// valor corrigido, em Rad
+
+          break;
+
+        //
+        /*
+        seta para cima ----------------------------------------------
+        */
+        case 38:
+          if(angFinal>=230)
+            angFinal=230;
+          else
+            angFinal++;
+
+          angRad = (angFinal*CENTO_OITENTA)/180;
+
+          break;
+
+        /*
+        Para qualquer outra tecla, encerra a execução dessa função
+        */
+        default:
+          return;
+      }
+
+      var calculos = calculaForcasAceleracao(angRad-CENTO_OITENTA);    
+
+      //chama função para calcular o ponto da reta vermelha,
+      // para redesenhar e escreescrever
+      var ponto = App.strategiesCalculadora.ponto.calcula([angRad, X_ZERO, Y_ZERO, BASE]);
+      reDesenha(ponto[0], ponto[1], angRad);
+      reescreve(angFinal-180, calculos[0], calculos[1], calculos[2]);
+    });
+  } //Fim ajustaKeydown
 
   /*
     Detecta cliques
