@@ -35,33 +35,14 @@ App.aplicacoes = (function ()
   var px_inicial = p_inicial * Math.sin(angRadInicial);
   var reduzdimensao = 250;
   
-  var calculaForcasAceleracao = function(angFinal){
-    /*
-          Ângulo entre o Plano Móvel e a Base: 
-    
-          Massa: 10kg
-          g: 9,8 m/s
-          Sem Atrito
-    
-          Aceleração do corpo -> a = g.senAngulo
-    
-          Força Peso = m*g
-          Força Normal N = m*g*cosAngulo
-    
-          Considerando:
-          Aceleração da Gravidade: 9,8m/s2.
-          Sem atrito.
-         */
-          var massa = 10;
-          var g = 9.8;
-          var p = massa * g;
-          var n = p * Math.cos(angFinal);
-        //  var py = p * Math.cos(angFinal);
-          var px = p * Math.sin(angFinal);
-      
-          var a = g * Math.sin(angFinal);
-  }
   
+  var massa = 10;
+  var g = 9.8;
+  var p = massa * g;
+  var n = p * Math.cos(angFinal);
+  //  var py = p * Math.cos(angFinal);
+  var px = p * Math.sin(angFinal);
+
   $(document).ready( function()
   {
     //instância de singletonCanvas
@@ -76,7 +57,7 @@ App.aplicacoes = (function ()
     BASE = (objCanvas.canvasWidth)/(reduzdimensao/p_inicial);
     BASE_Py_inicial = (objCanvas.canvasWidth)/(reduzdimensao/py_inicial);
     BASE_Px_inicial = (objCanvas.canvasWidth)/(reduzdimensao/px_inicial);
-    BASE_Py = (objCanvas.canvasWidth)/(reduzdimensao/py);
+    BASE_Py = (objCanvas.canvasWidth)/(reduzdimensao/n);
     BASE_Px = (objCanvas.canvasWidth)/(reduzdimensao/px);
 
   })
