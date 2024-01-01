@@ -60,6 +60,7 @@ App.aplicacoes = (function ()
           var px = p * Math.sin(angFinal);
       
           var a = g * Math.sin(angFinal);
+  }
   
   $(document).ready( function()
   {
