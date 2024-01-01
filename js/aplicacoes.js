@@ -26,15 +26,17 @@ App.aplicacoes = (function ()
   
   
   //tentativa de criar nova variável para poder multiplicar por BASE
-    var massateste = 10;
-  var gteste = 9.8;
-  var pteste = massateste * gteste;
+    var massa = 10;
+     var g = 9.8;
+     var p = massa * g;
  // var angRadInicial = (210*CENTO_OITENTA)/180;
     var angRadInicial = TRINTA;
- var nteste = pteste * Math.cos(angRadInicial);
- var pxteste = pteste * Math.sin(angRadInicial);
+  var py_inicial = p * Math.cos(angRadInicial);
+  var px_inicial = p * Math.sin(angRadInicial);
   var reduzdimensao = 250;
-
+  var py = p * Math.cos(angFinal);
+  var px = p * Math.sin(angFinal);
+  var a = g * Math.sin(angFinal);
   
   $(document).ready( function()
   {
@@ -48,8 +50,10 @@ App.aplicacoes = (function ()
     //BASE = objCanvas.canvasWidth/2.5;
     //TESTE = 2.5;
     BASE = (objCanvas.canvasWidth)/(reduzdimensao/pteste);
-    BASE_Py_inicial = (objCanvas.canvasWidth)/(reduzdimensao/nteste);
-    BASE_Px_inicial = (objCanvas.canvasWidth)/(reduzdimensao/pxteste);
+    BASE_Py_inicial = (objCanvas.canvasWidth)/(reduzdimensao/py_inicial);
+    BASE_Px_inicial = (objCanvas.canvasWidth)/(reduzdimensao/px_inicial);
+    BASE_Py = (objCanvas.canvasWidth)/(reduzdimensao/py);
+    BASE_Px = (objCanvas.canvasWidth)/(reduzdimensao/px);
 
   })
 
@@ -566,11 +570,11 @@ App.aplicacoes = (function ()
       Aceleração da Gravidade: 9,8m/s2.
       Sem atrito.
      */
-      var massa = 10;
-      var g = 9.8;
-      var p = massa * g;
-      var n = p * Math.cos(angFinal);
-      var a = g * Math.sin(angFinal);
+     // var massa = 10;
+     // var g = 9.8;
+     // var p = massa * g;
+     // var n = p * Math.cos(angFinal);
+     // var a = g * Math.sin(angFinal);
 
       return [p, parseFloat(n).toFixed(5), parseFloat(a).toFixed(5)];
 
