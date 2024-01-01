@@ -13,6 +13,7 @@ App.aplicacoes = (function ()
   var X_ZERO;
   var Y_ZERO;
   var BASE;
+  var BASE2;
   //tentativa de criar nova variável para poder multiplicar por BASE
     var massateste = 10;
   var gteste = 9.8;
@@ -38,6 +39,7 @@ App.aplicacoes = (function ()
     //BASE = objCanvas.canvasWidth/2.5;
     //TESTE = 2.5;
     BASE = (objCanvas.canvasWidth)/(reduzdimensao/pteste);
+    BASE2 = (objCanvas.canvasWidth)/(reduzdimensao/nteste);
 
   })
 
@@ -277,13 +279,13 @@ App.aplicacoes = (function ()
     //  a reta que representa a força peso (gravidade) P ... ponto G
     //  a reta Px ... ponto H
     //  a reta Py ... ponto F ... comprimento de E = F e ambos precisam ser menores que G ... ajustando valores em BASE/12 para Peso e BASE/14 para N  e BASE/24 para Px
-    var pontoE = App.strategiesCalculadora.ponto.calcula([angRadInicial + NOVENTA, NovoXZero, NovoYZero, (BASE/14)*4]);
+    var pontoE = App.strategiesCalculadora.ponto.calcula([angRadInicial + NOVENTA, NovoXZero, NovoYZero, (BASE2/14)*4]);
     var pontoF = App.strategiesCalculadora.ponto.calcula([angRadInicial - NOVENTA, NovoXZero, NovoYZero, (BASE/14)*4]);
     var pontoG = App.strategiesCalculadora.ponto.calcula([angRadInicial - angRetaP, NovoXZero, NovoYZero, (BASE/12)*4]);
     var pontoH = App.strategiesCalculadora.ponto.calcula([angRadInicial - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE/24)*4]);
 
-    var pontoI = App.strategiesCalculadora.ponto.calcula([angRadInicial + NOVENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE/14)*3.5]);
-    var pontoJ = App.strategiesCalculadora.ponto.calcula([angRadInicial + NOVENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE/14)*3.5]);
+    var pontoI = App.strategiesCalculadora.ponto.calcula([angRadInicial + NOVENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE2/14)*3.5]);
+    var pontoJ = App.strategiesCalculadora.ponto.calcula([angRadInicial + NOVENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE2/14)*3.5]);
     var pontoK = App.strategiesCalculadora.ponto.calcula([angRadInicial - NOVENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE/14)*3.5]);
     var pontoL = App.strategiesCalculadora.ponto.calcula([angRadInicial - NOVENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE/14)*3.5]);
     var pontoM = App.strategiesCalculadora.ponto.calcula([angRadInicial - angRetaP - (TRINTA/10), NovoXZero, NovoYZero, (BASE/12)*3.5]);
