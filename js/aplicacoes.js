@@ -391,32 +391,17 @@ App.aplicacoes = (function ()
   {
 
   //constantes
-  var BASE_Py;
-  var BASE_Px;
- 
-
-  var massa = 10;
+    var massa = 10;
     var g = 9.8;
     var p = massa * g;
     var py = p * Math.cos(angFinal);
     var px = p * Math.sin(angFinal);
-
-  $(document).ready( function()
-  {
-    //instância de singletonCanvas
-    objCanvas = App.singletons.singletonCanvas.getInstancia();
-    objImagens = App.singletons.singletonImagens.getInstancia();
-
+    var BASE_Py = (objCanvas.canvasWidth)/(reduzdimensao/py);
+    var BASE_Px = (objCanvas.canvasWidth)/(reduzdimensao/px);
     
-    //constantes para serem usadas pelas funções
-    X_ZERO = objCanvas.canvasWidth/2;
-    Y_ZERO = objCanvas.canvasHeight/2 + objCanvas.canvasHeight/5;
-    BASE = (objCanvas.canvasWidth)/(reduzdimensao/p_inicial);
-    BASE_Py = (objCanvas.canvasWidth)/(reduzdimensao/py);
-    BASE_Px = (objCanvas.canvasWidth)/(reduzdimensao/px);
 
-  })
-    //limpeza inicial da tela, para reconstrução
+  
+      //limpeza inicial da tela, para reconstrução
     //somente o canvas superior
     App.strategiesTela.limpaTela.executa([
       "1",
@@ -598,7 +583,7 @@ App.aplicacoes = (function ()
       var px = p * Math.sin(angFinal);
   
       var a = g * Math.sin(angFinal);
-
+      
       return [p, parseFloat(py).toFixed(5), parseFloat(a).toFixed(5)];
 
   }
