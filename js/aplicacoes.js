@@ -573,7 +573,7 @@ App.aplicacoes = (function ()
       var p = massa * g;
       var n = p * Math.cos(angFinal);
     //  var py = p * Math.cos(angFinal);
-      var px = p * Math.sin(angFinal);
+    //  var px = p * Math.sin(angFinal);
   
       var a = g * Math.sin(angFinal);
 
