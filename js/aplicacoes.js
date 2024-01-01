@@ -43,7 +43,7 @@ App.aplicacoes = (function ()
     //BASE = objCanvas.canvasWidth/2.5;
     //TESTE = 2.5;
     BASE = (objCanvas.canvasWidth)/(reduzdimensao/pteste);
-    BASE2 = (objCanvas.canvasWidth)/(reduzdimensao/nteste);
+    BASE2 = (objCanvas.canvasWidth)/(reduzdimensao/84);
 
   })
 
