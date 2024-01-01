@@ -14,18 +14,22 @@ App.aplicacoes = (function ()
   var Y_ZERO;
   var BASE;
   var BASE2;
-  //tentativa de criar nova variável para poder multiplicar por BASE
-    var massateste = 10;
-  var gteste = 9.8;
-  var pteste = massateste * gteste;
-  var nteste = pteste * Math.cos(angRadInicial);
-  var reduzdimensao = 250;
-
+  
   //Constantes numéricas - ângulos principais
   var CENTO_OITENTA = Math.PI;
   var NOVENTA = CENTO_OITENTA/2;
   var TRINTA = NOVENTA/3;
   var DUZENTOS_SETENTA = CENTO_OITENTA + NOVENTA;
+  
+  
+  //tentativa de criar nova variável para poder multiplicar por BASE
+    var massateste = 10;
+  var gteste = 9.8;
+  var pteste = massateste * gteste;
+  var angRadInicial = (210*CENTO_OITENTA)/180;
+  var nteste = pteste * Math.cos(angRadInicial);
+  var reduzdimensao = 250;
+
   
   $(document).ready( function()
   {
