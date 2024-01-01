@@ -35,15 +35,82 @@ App.aplicacoes = (function ()
   var px_inicial = p_inicial * Math.sin(angRadInicial);
   var reduzdimensao = 250;
   
+  // Fora da função, pois deve guardar o valor final dentro da função
+  // Limitando o ângulo na tela entre 0° a 50°
+  var angFinal;
+  /*
+    Detecta botões do teclado pressionados
+  */
+  var ajustaKeyDown = function ()
+  {
+    //desvincula os eventos existentes (todos os keydowns)
+    objCanvas.doc.unbind("keydown");
+
+    objCanvas.doc.on("keydown.planoinclinado", function (evt)
+    {
+      var angRad; // para uso interno na função
+
+      // garante que o ângulo sempre comece em ZERO quando entrar no módulo
+      if(primeiraTela)
+      {
+        angFinal = 210;
+        primeiraTela = false;
+      }
+
+      switch (evt.keyCode) //Testa o código do evento do teclado
+      {
+        //
+        /*
+        código 40 -> seta para baixo --------------------------------------------
+        Faz a reta andar no sentido antihorário, fazendo o ângulo decrescer
+        */
+        case 40:
+          if(angFinal<=180)
+            angFinal=180;
+          else
+            angFinal--;
+
+          if(angFinal==0)
+            angRad = 0;
+
+          else
+            angRad = (angFinal*CENTO_OITENTA)/180;// valor corrigido, em Rad
+
+          break;
+
+        //
+        /*
+        seta para cima ----------------------------------------------
+        */
+        case 38:
+          if(angFinal>=230)
+            angFinal=230;
+          else
+            angFinal++;
+
+          angRad = (angFinal*CENTO_OITENTA)/180;
+
+          break;
+
+        /*
+        Para qualquer outra tecla, encerra a execução dessa função
+        */
+        default:
+          return;
+      }
+
+      var calculos = calculaForcasAceleracao(angRad-CENTO_OITENTA);    
+
+       });
+  } //Fim ajustaKeydown
+
   
   var massa = 10;
   var g = 9.8;
   var p = massa * g;
   var py = p * Math.cos(angFinal);
-  //  var py = p * Math.cos(angFinal);
   var px = p * Math.sin(angFinal);
-
-
+  
 
   
   $(document).ready( function()
