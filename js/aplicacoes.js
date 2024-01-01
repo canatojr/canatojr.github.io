@@ -14,6 +14,7 @@ App.aplicacoes = (function ()
   var Y_ZERO;
   var BASE;
   var BASE2;
+  var BASE3;
   
   //Constantes numéricas - ângulos principais
   var CENTO_OITENTA = Math.PI;
