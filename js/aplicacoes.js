@@ -35,8 +35,6 @@ App.aplicacoes = (function ()
   var px_inicial = p_inicial * Math.sin(angRadInicial);
   var reduzdimensao = 250;
   
-  // Fora da função, pois deve guardar o valor final dentro da função
-  // Limitando o ângulo na tela entre 0° a 50°
   var angFinal;
   /*
     Detecta botões do teclado pressionados
