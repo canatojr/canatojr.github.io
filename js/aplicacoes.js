@@ -617,7 +617,7 @@ App.aplicacoes = (function ()
       Sem atrito.
      */
       var massa = 10;
-      var g = 9.8;
+      var g = 10;
       var p = massa * g;
       var px = p * Math.sin(angFinal);
       var py = p * Math.cos(angFinal);
