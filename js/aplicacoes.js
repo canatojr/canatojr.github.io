@@ -428,21 +428,19 @@ App.aplicacoes = (function ()
   //----------------------------------------------------------------------------
   var reDesenha = function (pontoX, pontoY, angRad)
   {
-    var calculaForcasAceleracao = function(angRad){
+
   //constantes
     var massa = 10;
     var g = 9.8;
     var p = massa * g;
     var py = p * Math.cos(angRad);
     var px = p * Math.sin(angRad);
-    var n = p * Math.cos(angRad);
+    var n = py;
     var a = g * Math.sin(angRad);
     var BASE_Py = (objCanvas.canvasWidth)/(reduzdimensao/py);
     var BASE_Px = (objCanvas.canvasWidth)/(reduzdimensao/px);
     
-// parseFloat define quantas casas decimais são exibidas
-return [p, parseFloat(px).toFixed(2), parseFloat(py).toFixed(2), parseFloat(n).toFixed(2), parseFloat(a).toFixed(2)];
-    }
+
   
       //limpeza inicial da tela, para reconstrução
     //somente o canvas superior
@@ -626,7 +624,7 @@ return [p, parseFloat(px).toFixed(2), parseFloat(py).toFixed(2), parseFloat(n).t
       var n = p * Math.cos(angFinal);
       var a = g * Math.sin(angFinal);
       // parseFloat define quantas casas decimais são exibidas
-     // return [p, parseFloat(px).toFixed(2), parseFloat(py).toFixed(2), parseFloat(n).toFixed(2), parseFloat(a).toFixed(2)];
+      return [p, parseFloat(px).toFixed(2), parseFloat(py).toFixed(2), parseFloat(n).toFixed(2), parseFloat(a).toFixed(2)];
 
   }
 
