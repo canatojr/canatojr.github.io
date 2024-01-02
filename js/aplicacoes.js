@@ -27,6 +27,7 @@ App.aplicacoes = (function ()
     var massa_inicial = 10;
      var g_inicial = 9.8;
      var p_inicial = massa_inicial * g_inicial;
+    
  // var angRadInicial = (210*CENTO_OITENTA)/180;
     var angRadInicial = TRINTA;
   var py_inicial = p_inicial * Math.cos(angRadInicial);
@@ -398,7 +399,7 @@ App.aplicacoes = (function ()
       270
     ]);
 
-    mensagem = n + " N";
+    mensagem = px + " N";
     App.strategiesTela.construtorTexto.executa([
       "1",
       mensagem,
@@ -619,7 +620,7 @@ App.aplicacoes = (function ()
       var p = massa * g;
       var px = p * Math.sin(angFinal);
       var py = p * Math.cos(angFinal);
-      var n = 10;
+      var n = py;
       var a = px/massa;
       // parseFloat define quantas casas decimais são exibidas
       return [parseFloat(p).toFixed(2), parseFloat(px).toFixed(2), parseFloat(py).toFixed(2), parseFloat(n).toFixed(2), parseFloat(a).toFixed(2)];
