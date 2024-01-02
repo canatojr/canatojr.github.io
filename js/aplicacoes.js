@@ -189,25 +189,6 @@ App.aplicacoes = (function ()
         objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)),
         305
       ]);
-      mensagem = "Componente Px: ";
-      App.strategiesTela.construtorTexto.executa([
-        "2",
-        mensagem,
-        "#0fc",
-        "Bold 16px Trebuchet MS",
-        objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)),
-        305
-      ]);
-      
-      mensagem = "Componente Py: ";
-      App.strategiesTela.construtorTexto.executa([
-        "2",
-        mensagem,
-        "#0fc",
-        "Bold 16px Trebuchet MS",
-        objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)),
-        305
-      ]);
 
       mensagem = "Aceleração: ";
       App.strategiesTela.construtorTexto.executa([
@@ -379,25 +360,6 @@ App.aplicacoes = (function ()
     ]);
 
     mensagem = n + " N";
-    App.strategiesTela.construtorTexto.executa([
-      "1",
-      mensagem,
-      "#FFF",
-      "Bold 16px Trebuchet MS",
-      objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*7),
-      305
-    ]);
-    mensagem = px + " N";
-    App.strategiesTela.construtorTexto.executa([
-      "1",
-      mensagem,
-      "#FFF",
-      "Bold 16px Trebuchet MS",
-      objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*7),
-      305
-    ]);
-
-    mensagem = py + " N";
     App.strategiesTela.construtorTexto.executa([
       "1",
       mensagem,
