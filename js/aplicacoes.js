@@ -186,9 +186,18 @@ App.aplicacoes = (function ()
         "#0fc",
         "Bold 16px Trebuchet MS",
         objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)),
-        235
+        245
       ]);
-
+      
+      mensagem = "Componente Py da Força Peso: ";
+      App.strategiesTela.construtorTexto.executa([
+        "2",
+        mensagem,
+        "#0fc",
+        "Bold 16px Trebuchet MS",
+        objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)),
+        270
+      ]);
 
       mensagem = "Força Normal: ";
       App.strategiesTela.construtorTexto.executa([
@@ -346,7 +355,7 @@ App.aplicacoes = (function ()
      desenhaReta(pontoQ[0], pontoQ[1], pontoS[0], pontoS[1], "#DAA520", 1, "1");
   }
 
-  var reescreve = function(angulo, p, n, a){
+  var reescreve = function(angulo, p, n, px, py, a){
 
 
     var mensagem = angulo + "°";
@@ -376,7 +385,17 @@ App.aplicacoes = (function ()
       "#FFF",
       "Bold 16px Trebuchet MS",
       objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*6),
-      235
+      245
+    ]);
+
+    mensagem = py + " N";
+    App.strategiesTela.construtorTexto.executa([
+      "1",
+      mensagem,
+      "#FFF",
+      "Bold 16px Trebuchet MS",
+      objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*6),
+      270
     ]);
 
     mensagem = n + " N";
