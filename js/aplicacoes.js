@@ -217,7 +217,7 @@ App.aplicacoes = (function ()
         "#0fc",
         "Bold 16px Trebuchet MS",
         objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)),
-        330
+        320
       ]);
 
       mensagem = "Considerando: ";
@@ -417,7 +417,7 @@ App.aplicacoes = (function ()
       "#FFFS",
       "Bold 16px Trebuchet MS",
       objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*6),
-      330
+      320
     ]);
   }
 
