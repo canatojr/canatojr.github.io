@@ -177,8 +177,18 @@ App.aplicacoes = (function ()
         "#0fc",
         "Bold 16px Trebuchet MS",
         objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)),
-        225
+        220
       ]);
+      mensagem = "Componente Px da Força Peso: ";
+      App.strategiesTela.construtorTexto.executa([
+        "2",
+        mensagem,
+        "#0fc",
+        "Bold 16px Trebuchet MS",
+        objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)),
+        235
+      ]);
+
 
       mensagem = "Força Normal: ";
       App.strategiesTela.construtorTexto.executa([
@@ -356,7 +366,17 @@ App.aplicacoes = (function ()
       "#FFF",
       "Bold 16px Trebuchet MS",
       objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*6),
-      225
+      220
+    ]);
+
+    mensagem = px + " N";
+    App.strategiesTela.construtorTexto.executa([
+      "1",
+      mensagem,
+      "#FFF",
+      "Bold 16px Trebuchet MS",
+      objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*6),
+      235
     ]);
 
     mensagem = n + " N";
