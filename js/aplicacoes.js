@@ -624,7 +624,7 @@ App.aplicacoes = (function ()
       var n = p * Math.cos(angFinal);
       var a = g * Math.sin(angFinal);
       // parseFloat define quantas casas decimais são exibidas
-      return [p, parseFloat(px).toFixed(2), parseFloat(py).toFixed(2), parseFloat(n).toFixed(2), parseFloat(a).toFixed(2)];
+      return [parseFloat(p).toFixed(2), parseFloat(px).toFixed(2), parseFloat(py).toFixed(2), parseFloat(n).toFixed(2), parseFloat(a).toFixed(2)];
 
   }
 
