@@ -435,7 +435,7 @@ App.aplicacoes = (function ()
     var p = massa * g;
     var py = p * Math.cos(angRad);
     var px = p * Math.sin(angRad);
-    var n = py;
+    var n = p * Math.cos(angRad);
     var a = g * Math.sin(angRad);
     var BASE_Py = (objCanvas.canvasWidth)/(reduzdimensao/py);
     var BASE_Px = (objCanvas.canvasWidth)/(reduzdimensao/px);
@@ -621,7 +621,7 @@ App.aplicacoes = (function ()
       var p = massa * g;
       var py = p * Math.cos(angFinal);
       var px = p * Math.sin(angFinal);
-      var n = py;
+      var n = p * Math.cos(angFinal);
       var a = g * Math.sin(angFinal);
       // parseFloat define quantas casas decimais são exibidas
       return [p, parseFloat(px).toFixed(2), parseFloat(py).toFixed(2), parseFloat(n).toFixed(2), parseFloat(a).toFixed(2)];
