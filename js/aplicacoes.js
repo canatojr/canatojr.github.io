@@ -439,7 +439,9 @@ App.aplicacoes = (function ()
     var a = g * Math.sin(angRad);
     var BASE_Py = (objCanvas.canvasWidth)/(reduzdimensao/py);
     var BASE_Px = (objCanvas.canvasWidth)/(reduzdimensao/px);
-    
+    var z = n;
+    var w = a;
+
 
   
       //limpeza inicial da tela, para reconstrução
