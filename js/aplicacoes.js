@@ -430,16 +430,16 @@ App.aplicacoes = (function ()
   {
 
   //constantes
-    var massa = 10,00;
-    var g = 9.80;
+    var massa = 10;
+    var g = 9.8;
     var p = massa * g;
     var py = p * Math.cos(angRad);
     var px = p * Math.sin(angRad);
-    var n = p * Math.cos(angRad);
     var a = g * Math.sin(angRad);
     var BASE_Py = (objCanvas.canvasWidth)/(reduzdimensao/py);
     var BASE_Px = (objCanvas.canvasWidth)/(reduzdimensao/px);
-   
+    
+
   
       //limpeza inicial da tela, para reconstrução
     //somente o canvas superior
@@ -620,10 +620,10 @@ App.aplicacoes = (function ()
       var p = massa * g;
       var py = p * Math.cos(angFinal);
       var px = p * Math.sin(angFinal);
-      var n = p * Math.cos(angFinal);
+      var n = py;
       var a = g * Math.sin(angFinal);
       // parseFloat define quantas casas decimais são exibidas
-      return [p, parseFloat(px).toFixed(2), parseFloat(py).toFixed(2), parseFloat(n).toFixed(2), parseFloat(a).toFixed(2)];
+      return [p, parseFloat(px).toFixed(5), parseFloat(py).toFixed(5), parseFloat(n).toFixed(5), parseFloat(a).toFixed(5)];
 
   }
 
