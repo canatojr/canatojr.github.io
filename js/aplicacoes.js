@@ -339,7 +339,7 @@ App.aplicacoes = (function ()
   var reescreve = function(angulo, p, n, a){
 
 
-    var mensagem = "Ângulo entre o plano inclinado e a base: "angulo + "°";
+    var mensagem = "Ângulo entre o plano inclinado e a base:" angulo + "°";
     App.strategiesTela.construtorTexto.executa([
       "1",
       mensagem,
