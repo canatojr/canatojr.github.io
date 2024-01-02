@@ -356,7 +356,7 @@ App.aplicacoes = (function ()
      desenhaReta(pontoQ[0], pontoQ[1], pontoS[0], pontoS[1], "#DAA520", 1, "1");
   }
 
-  var reescreve = function(angulo, p, px, py, n, a){
+  var reescreve = function(angulo, n, a, px, py, p){
 
 
     var mensagem = angulo + "°";
@@ -399,7 +399,7 @@ App.aplicacoes = (function ()
       270
     ]);
 
-    mensagem = px + " N";
+    mensagem = n + " N";
     App.strategiesTela.construtorTexto.executa([
       "1",
       mensagem,
