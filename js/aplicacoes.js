@@ -251,7 +251,7 @@ App.aplicacoes = (function ()
       ]);
 
       var calculos = calculaForcasAceleracao((30*CENTO_OITENTA)/180);  
-      reescreve(30, calculos[0], calculos[1], calculos[2]);
+      reescreve(30, calculos[0], calculos[1], calculos[2], calculos[3], calculos[4]);
 
      //Base do plano inclinado - no canvas 2 pois não precisa redesenhar
     desenhaReta((X_ZERO)-(BASE), Y_ZERO, (X_ZERO), Y_ZERO, "#FFF", 4, "2");
