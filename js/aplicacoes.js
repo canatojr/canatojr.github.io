@@ -427,7 +427,7 @@ App.aplicacoes = (function ()
   //----------------------------------------------------------------------------
   // ReDesenha
   //----------------------------------------------------------------------------
-  var reDesenha = function (pontoX, pontoY, angRad, n, a)
+  var reDesenha = function (pontoX, pontoY, angRad)
   {
 
   //constantes
