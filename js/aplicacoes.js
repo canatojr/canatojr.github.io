@@ -206,7 +206,7 @@ App.aplicacoes = (function ()
         "#0fc",
         "Bold 16px Trebuchet MS",
         objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)),
-        305
+        295
       ]);
 
       mensagem = "Aceleração: ";
@@ -384,7 +384,7 @@ App.aplicacoes = (function ()
       mensagem,
       "#FFF",
       "Bold 16px Trebuchet MS",
-      objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*6),
+      objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*15),
       245
     ]);
 
@@ -394,7 +394,7 @@ App.aplicacoes = (function ()
       mensagem,
       "#FFF",
       "Bold 16px Trebuchet MS",
-      objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*6),
+      objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*15),
       270
     ]);
 
@@ -405,7 +405,7 @@ App.aplicacoes = (function ()
       "#FFF",
       "Bold 16px Trebuchet MS",
       objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*7),
-      305
+      295
     ]);
 
     mensagem = a + " m/s²";
