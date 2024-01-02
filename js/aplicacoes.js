@@ -439,9 +439,7 @@ App.aplicacoes = (function ()
     var a = g * Math.sin(angRad);
     var BASE_Py = (objCanvas.canvasWidth)/(reduzdimensao/py);
     var BASE_Px = (objCanvas.canvasWidth)/(reduzdimensao/px);
-    // parseFloat define quantas casas decimais são exibidas
-    return [p, parseFloat(px).toFixed(5), parseFloat(py).toFixed(5), parseFloat(n).toFixed(5), parseFloat(a).toFixed(5)];
-
+   
   
       //limpeza inicial da tela, para reconstrução
     //somente o canvas superior
