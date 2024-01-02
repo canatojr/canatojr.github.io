@@ -376,7 +376,7 @@ App.aplicacoes = (function ()
       mensagem,
       "#FFF",
       "Bold 16px Trebuchet MS",
-      objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*4),
+      objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*5),
       220
     ]);
 
@@ -406,7 +406,7 @@ App.aplicacoes = (function ()
       mensagem,
       "#FFF",
       "Bold 16px Trebuchet MS",
-      objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*5),
+      objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*6),
       295
     ]);
 
@@ -416,7 +416,7 @@ App.aplicacoes = (function ()
       mensagem,
       "#FFFS",
       "Bold 16px Trebuchet MS",
-      objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*4),
+      objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*5),
       320
     ]);
   }
