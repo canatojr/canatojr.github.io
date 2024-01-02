@@ -619,7 +619,7 @@ App.aplicacoes = (function ()
       var p = massa * g;
       var px = p * Math.sin(angFinal);
       var py = p * Math.cos(angFinal);
-      var n = py;
+      var n = 10;
       var a = px/massa;
       // parseFloat define quantas casas decimais são exibidas
       return [parseFloat(p).toFixed(2), parseFloat(px).toFixed(2), parseFloat(py).toFixed(2), parseFloat(n).toFixed(2), parseFloat(a).toFixed(2)];
