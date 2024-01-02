@@ -339,14 +339,14 @@ App.aplicacoes = (function ()
   var reescreve = function(angulo, p, n, a){
 
 
-    var mensagem = "Ângulo entre o plano inclinado e a base:" angulo + "°";
+    var mensagem = angulo + "°";
     App.strategiesTela.construtorTexto.executa([
       "1",
       mensagem,
       "#FFF",
       "Bold 16px Trebuchet MS",
       objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*7.2),
-      195
+      170
     ]);
 
     mensagem = p + " N";
