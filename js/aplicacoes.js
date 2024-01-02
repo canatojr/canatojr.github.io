@@ -160,7 +160,7 @@ App.aplicacoes = (function ()
         195
       ]);
 
-      mensagem = "10 kg";
+      mensagem = "10.0 kg";
       App.strategiesTela.construtorTexto.executa([
         "2",
         mensagem,
