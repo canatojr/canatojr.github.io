@@ -615,15 +615,15 @@ App.aplicacoes = (function ()
       Aceleração da Gravidade: 9,8m/s2.
       Sem atrito.
      */
-      var massa = 10;
-      var g = 9.9;
+      var massa = 10.0;
+      var g = 9.8;
       var p = massa * g;
       var px = p * Math.sin(angFinal);
       var py = p * Math.cos(angFinal);
       var n = py;
       var a = px/massa;
       // parseFloat define quantas casas decimais são exibidas
-      return [parseFloat(p).toFixed(2), parseFloat(px).toFixed(2), parseFloat(py).toFixed(2), parseFloat(n).toFixed(2), parseFloat(a).toFixed(2)];
+      return [parseFloat(p).toFixed(1), parseFloat(px).toFixed(1), parseFloat(py).toFixed(1), parseFloat(n).toFixed(1), parseFloat(a).toFixed(1)];
 
   }
 
@@ -697,7 +697,8 @@ App.aplicacoes = (function ()
       // para redesenhar e escreescrever
       var ponto = App.strategiesCalculadora.ponto.calcula([angRad, X_ZERO, Y_ZERO, BASE]);
       reDesenha(ponto[0], ponto[1], angRad);
-      reescreve(angFinal-180, calculos[0], calculos[1], calculos[2]);
+      // linha a seguir determina quantas variáveis calculadas podem ficar visíveis na tela  
+      reescreve(angFinal-180, calculos[0], calculos[1], calculos[2], calculos[3], calculos[4]);
     });
   } //Fim ajustaKeydown
 
