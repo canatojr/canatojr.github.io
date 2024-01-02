@@ -439,11 +439,7 @@ App.aplicacoes = (function ()
     var a = g * Math.sin(angRad);
     var BASE_Py = (objCanvas.canvasWidth)/(reduzdimensao/py);
     var BASE_Px = (objCanvas.canvasWidth)/(reduzdimensao/px);
-    var z = n;
-    var w = a;
-
-
-  
+      
       //limpeza inicial da tela, para reconstrução
     //somente o canvas superior
     App.strategiesTela.limpaTela.executa([
@@ -619,12 +615,12 @@ App.aplicacoes = (function ()
       Sem atrito.
      */
       var massa = 10;
-      var g = 9.9;
+      var g = 10;
       var p = massa * g;
       var px = p * Math.sin(angFinal);
       var py = p * Math.cos(angFinal);
-      var n = p * Math.cos(angFinal);
-      var a = g * Math.sin(angFinal);
+      var n = py;
+      var a = px/massa;
       // parseFloat define quantas casas decimais são exibidas
       return [parseFloat(p).toFixed(2), parseFloat(px).toFixed(2), parseFloat(py).toFixed(2), parseFloat(n).toFixed(2), parseFloat(a).toFixed(2)];
 
