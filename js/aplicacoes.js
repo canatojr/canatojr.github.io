@@ -185,7 +185,7 @@ App.aplicacoes = (function ()
         mensagem,
         "#0fc",
         "Bold 16px Trebuchet MS",
-        objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*16),
+        objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)),
         245
       ]);
       
@@ -195,7 +195,7 @@ App.aplicacoes = (function ()
         mensagem,
         "#0fc",
         "Bold 16px Trebuchet MS",
-        objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*16),
+        objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)),
         270
       ]);
 
@@ -384,7 +384,7 @@ App.aplicacoes = (function ()
       mensagem,
       "#FFF",
       "Bold 16px Trebuchet MS",
-      objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*10),
+      objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*15),
       245
     ]);
 
@@ -394,7 +394,7 @@ App.aplicacoes = (function ()
       mensagem,
       "#FFF",
       "Bold 16px Trebuchet MS",
-      objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*10),
+      objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*15),
       270
     ]);
 
@@ -623,7 +623,7 @@ App.aplicacoes = (function ()
       var n = py;
       var a = g * Math.sin(angFinal);
       // parseFloat define quantas casas decimais são exibidas
-      return [p, parseFloat(n).toFixed(5), parseFloat(px).toFixed(5), parseFloat(py).toFixed(5), parseFloat(a).toFixed(5)];
+      return [p, parseFloat(px).toFixed(5), parseFloat(py).toFixed(5), parseFloat(n).toFixed(5), parseFloat(a).toFixed(5)];
 
   }
 
