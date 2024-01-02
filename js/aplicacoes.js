@@ -619,12 +619,11 @@ App.aplicacoes = (function ()
       var g = 9.8;
       var p = massa * g;
       var py = p * Math.cos(angFinal);
-    //  var py = p * Math.cos(angFinal);
       var px = p * Math.sin(angFinal);
-  
+      var n = py;
       var a = g * Math.sin(angFinal);
       
-      return [p, parseFloat(py).toFixed(5), parseFloat(a).toFixed(5)];
+      return [p, parseFloat(n).toFixed(5), parseFloat(px).toFixed(5), parseFloat(py).toFixed(5), parseFloat(a).toFixed(5)];
 
   }
 
