@@ -185,7 +185,7 @@ App.aplicacoes = (function ()
         mensagem,
         "#0fc",
         "Bold 16px Trebuchet MS",
-        objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)),
+        objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*16),
         245
       ]);
       
@@ -195,7 +195,7 @@ App.aplicacoes = (function ()
         mensagem,
         "#0fc",
         "Bold 16px Trebuchet MS",
-        objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)),
+        objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*16),
         270
       ]);
 
@@ -355,7 +355,7 @@ App.aplicacoes = (function ()
      desenhaReta(pontoQ[0], pontoQ[1], pontoS[0], pontoS[1], "#DAA520", 1, "1");
   }
 
-  var reescreve = function(angulo, p, n, px, py, a){
+  var reescreve = function(angulo, p, px, py, n, a){
 
 
     var mensagem = angulo + "°";
@@ -622,7 +622,7 @@ App.aplicacoes = (function ()
       var px = p * Math.sin(angFinal);
       var n = py;
       var a = g * Math.sin(angFinal);
-      
+      // parseFloat define quantas casas decimais são exibidas
       return [p, parseFloat(n).toFixed(5), parseFloat(px).toFixed(5), parseFloat(py).toFixed(5), parseFloat(a).toFixed(5)];
 
   }
