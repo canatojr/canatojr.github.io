@@ -125,7 +125,7 @@ App.aplicacoes = (function ()
       "2",
       mensagem,
       "#0fc",
-      "Bold 16px Trebuchet MS",
+      "Bold 18px Trebuchet MS",
       objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*3),
       100
     ]);
@@ -134,7 +134,7 @@ App.aplicacoes = (function ()
       "2",
       mensagem,
       "#0fc",
-      "Bold 16px Trebuchet MS",
+      "Bold 18px Trebuchet MS",
       objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*3),
       125
     ]);
@@ -144,7 +144,7 @@ App.aplicacoes = (function ()
         "2",
         mensagem,
         "#0fc",
-        "Bold 16px Trebuchet MS",
+        "Bold 18px Trebuchet MS",
         objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)),
         170
       ]);
@@ -154,7 +154,7 @@ App.aplicacoes = (function ()
         "2",
         mensagem,
         "#0fc",
-        "Bold 16px Trebuchet MS",
+        "Bold 18px Trebuchet MS",
         objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)),
         225
       ]);
@@ -164,7 +164,7 @@ App.aplicacoes = (function ()
         "2",
         mensagem,
         "#FFF",
-        "Bold 16px Trebuchet MS",
+        "Bold 18px Trebuchet MS",
         objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*7),
         // *7 se refere à posição horizontal e 250 à posição vertical
         250
@@ -175,7 +175,7 @@ App.aplicacoes = (function ()
         "2",
         mensagem,
         "#0fc",
-        "Bold 16px Trebuchet MS",
+        "Bold 18px Trebuchet MS",
         objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)),
         280
       ]);
@@ -185,7 +185,7 @@ App.aplicacoes = (function ()
         "2",
         mensagem,
         "#0fc",
-        "Bold 16px Trebuchet MS",
+        "Bold 18px Trebuchet MS",
         objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)),
         305
       ]);
@@ -195,7 +195,7 @@ App.aplicacoes = (function ()
         "2",
         mensagem,
         "#0fc",
-        "Bold 16px Trebuchet MS",
+        "Bold 18px Trebuchet MS",
         objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)),
         330
       ]);
@@ -205,7 +205,7 @@ App.aplicacoes = (function ()
         "2",
         mensagem,
         "#0fc",
-        "Bold 16px Trebuchet MS",
+        "Bold 18px Trebuchet MS",
         objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)),
         360
       ]);
@@ -215,7 +215,7 @@ App.aplicacoes = (function ()
         "2",
         mensagem,
         "#0fc",
-        "Bold 16px Trebuchet MS",
+        "Bold 18px Trebuchet MS",
         objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)),
         385
       ]);
@@ -225,7 +225,7 @@ App.aplicacoes = (function ()
         "2",
         mensagem,
         "#0fc",
-        "Bold 16px Trebuchet MS",
+        "Bold 18px Trebuchet MS",
         objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)),
         410
       ]);
@@ -344,7 +344,7 @@ App.aplicacoes = (function ()
       "1",
       mensagem,
       "#FFF",
-      "Bold 16px Trebuchet MS",
+      "Bold 18px Trebuchet MS",
       objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*7.2),
       195
     ]);
@@ -354,7 +354,7 @@ App.aplicacoes = (function ()
       "1",
       mensagem,
       "#FFF",
-      "Bold 16px Trebuchet MS",
+      "Bold 18px Trebuchet MS",
       objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*6),
       280
     ]);
@@ -364,7 +364,7 @@ App.aplicacoes = (function ()
       "1",
       mensagem,
       "#FFF",
-      "Bold 16px Trebuchet MS",
+      "Bold 18px Trebuchet MS",
       objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*7),
       305
     ]);
@@ -374,7 +374,7 @@ App.aplicacoes = (function ()
       "1",
       mensagem,
       "#FFFS",
-      "Bold 16px Trebuchet MS",
+      "Bold 18px Trebuchet MS",
       objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*6),
       330
     ]);
