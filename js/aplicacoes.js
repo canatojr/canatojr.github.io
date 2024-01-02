@@ -156,7 +156,7 @@ App.aplicacoes = (function ()
         "#0fc",
         "Bold 16px Trebuchet MS",
         objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)),
-        225
+        195
       ]);
 
       mensagem = "10 kg";
@@ -167,7 +167,7 @@ App.aplicacoes = (function ()
         "Bold 16px Trebuchet MS",
         objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*15),
         // *7 se refere à posição horizontal e 250 à posição vertical
-        225
+        195
       ]);
 
       mensagem = "Força Peso: ";
@@ -177,7 +177,7 @@ App.aplicacoes = (function ()
         "#0fc",
         "Bold 16px Trebuchet MS",
         objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)),
-        280
+        225
       ]);
 
       mensagem = "Força Normal: ";
@@ -356,7 +356,7 @@ App.aplicacoes = (function ()
       "#FFF",
       "Bold 16px Trebuchet MS",
       objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*6),
-      280
+      225
     ]);
 
     mensagem = n + " N";
