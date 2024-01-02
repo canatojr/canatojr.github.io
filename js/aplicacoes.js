@@ -166,7 +166,7 @@ App.aplicacoes = (function ()
         mensagem,
         "#FFF",
         "Bold 16px Trebuchet MS",
-        objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/22)*15),
+        objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/22)*18),
         // *7 se refere à posição horizontal e 250 à posição vertical
         195
       ]);
@@ -376,7 +376,7 @@ App.aplicacoes = (function ()
       mensagem,
       "#FFF",
       "Bold 16px Trebuchet MS",
-      objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*6),
+      objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*4),
       220
     ]);
 
@@ -406,7 +406,7 @@ App.aplicacoes = (function ()
       mensagem,
       "#FFF",
       "Bold 16px Trebuchet MS",
-      objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*7),
+      objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*5),
       295
     ]);
 
@@ -416,7 +416,7 @@ App.aplicacoes = (function ()
       mensagem,
       "#FFFS",
       "Bold 16px Trebuchet MS",
-      objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*6),
+      objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*4),
       320
     ]);
   }
